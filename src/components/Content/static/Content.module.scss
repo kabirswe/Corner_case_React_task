@@ -1,0 +1,19 @@
+.ContentSection {
+    background-color: rgb(236, 170, 91);
+    width: 320px;
+    height: 320px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2a2a35;
+      
+}
+.Title {
+    font-size: 22px;
+    font-family: "Helvetica Neue";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 26px;  
+}
