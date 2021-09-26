@@ -12,7 +12,7 @@ export const RadioWidget: React.FC<RadioWidgetProps> = ({title}) => {
     return (
         <div>
             <Header title="stations" />
-            <Content title="ahsjahf" />
+            <Content />
             <Footer topTitle="Currently Playing" title="Bribbble Fm" />
         </div>
     )

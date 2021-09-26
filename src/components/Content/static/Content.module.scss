@@ -1,13 +1,11 @@
 .ContentSection {
-    background-color: rgb(236, 170, 91);
     width: 320px;
     height: 320px;
     padding: 0 20px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
     background-color: #2a2a35;
-      
+    overflow-y: auto;
 }
 .Title {
     font-size: 22px;
