@@ -4,7 +4,7 @@ import { RadioWidget } from './components/RadioWidget/RadioWidget';
 function App() {
   return (
     <div className={styles.App}>
-      <RadioWidget title="" />
+      <RadioWidget />
     </div>
   );
 }
