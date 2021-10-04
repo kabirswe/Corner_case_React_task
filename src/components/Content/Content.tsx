@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import { ListItems } from './ListItem';
 import FmImage from './static/image/fm.png';
 import styles from './static/Content.module.scss';
+import { activeRadio, removeRadio } from '../../store/RadioSlice';
+import { useDispatch } from 'react-redux';
 
 const stationData = [
     {
@@ -33,10 +35,14 @@ const stationData = [
 
 export const Content: React.FC = () => {
 
+    const dispatch = useDispatch();
     const [clicked, setClicked] = useState<string|number>("0");
     const handleToggle = (val:any) => {
         if (clicked === val) {
+            dispatch(removeRadio());
             return setClicked("0");
+        } else {
+            dispatch(activeRadio(stationData[val]));
         }
         setClicked(val);
     };

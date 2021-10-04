@@ -2,18 +2,14 @@ import React from 'react';
 import { Content } from '../Content/Content';
 import { Footer } from '../Footer/Footer';
 import { Header } from '../Header/Header';
-import styles from './static/RadioWidget.module.scss';
 
-export interface RadioWidgetProps {
-    title: string;
-  }
-
-export const RadioWidget: React.FC<RadioWidgetProps> = ({title}) => {
+export const RadioWidget: React.FC = () => {
+    const title:string = 'stations';
     return (
         <div>
-            <Header title="stations" />
+            <Header title={title} />
             <Content />
-            <Footer topTitle="Currently Playing" title="Bribbble Fm" />
+            <Footer />
         </div>
     )
 }

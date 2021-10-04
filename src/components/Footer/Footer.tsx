@@ -1,16 +1,15 @@
 import React from 'react';
 import styles from './static/Footer.module.scss';
+import { useSelector } from 'react-redux';
 
-export interface FooterProps {
-    topTitle: string;
-    title: string;
-}
+import { TStore } from '../../store';
 
-export const Footer: React.FC<FooterProps> = ({title, topTitle}) => {
+export const Footer: React.FC = () => {
+    let { name } = useSelector((state:TStore) => state.RadioSlice);
     return (
         <div className={styles.FooterSection}>
-            <p className={styles.TopTitle}>{topTitle}</p>
-            <h3 className={styles.Title}>{title}</h3>
+            <p className={styles.TopTitle}>CURRENTLY PLAYING</p>
+            <h3 className={styles.Title}>{name}</h3>
         </div>
     )
 }

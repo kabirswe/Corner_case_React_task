@@ -15,9 +15,9 @@ export const ListItems: React.FC<ListItemsProps> = ({title, frequency, image, ac
     return (
         <div className={styles.ListSection}>
             <div className={activeStation ? (`${styles.FlipPanel} ${styles.FlipPanelShow}`) : styles.FlipPanel}>
-                <img src={MinusImage} className={styles.Minus} />
-                <img src={image} className={styles.FmImage} />
-                <img src={PlusImage} className={styles.Plus} />
+                <img src={MinusImage} className={styles.Minus} alt="" />
+                <img src={image} className={styles.FmImage} alt=""  />
+                <img src={PlusImage} className={styles.Plus} alt=""  />
             </div>
             <div className={styles.StationInfo} onClick={onToggle}>
                 <p className={styles.TitleName}>{title}</p>
